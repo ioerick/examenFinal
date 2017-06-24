@@ -1,0 +1,17 @@
+<center>
+<form action="guardarNota" method="post">
+  <label for="nombre">nombre</label>
+  <select name="nombre" id="nombre">
+    <option>Eric coila</option>
+    <option>Laura Ochoa</option>
+    <option>Rafael Argandoña</option>
+  </select>
+  <div>
+    <label for="notaFinal">notaFinal</label>
+    <input type="text" id="notaFinal" name="notas[notaFinal]" value="<%= notas.notaFinal %>">
+  </div>
+  <div>
+    <input type="submit" name="envio" value="Registra Reclamo">
+  </div>
+</form>
+</center>
