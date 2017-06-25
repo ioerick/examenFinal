@@ -1,20 +1,22 @@
-<h3>Bienvenido a  <%= title %></h3>
-<form action="buscaReclamo" method="post">
-  <select name="fechaFiltro" id="fechaFiltro">
-    <option>elige una fecha</option>
-    <%
-    for(var i=0; i< reclamos.length; i++) {
-      var c = 0;
-      for(var j=0; j< i; j++){
-        if(reclamos[j].fecha == reclamos[i].fecha){
-          c++;
+<div class="container">
+  <form action="buscaReclamo" method="post">
+    <h3>Bienvenido a  <%= title %></h3>
+    <select name="fechaFiltro" id="fechaFiltro">
+      <option>elige una fecha</option>
+      <%
+      for(var i=0; i< reclamos.length; i++) {
+        var c = 0;
+        for(var j=0; j< i; j++){
+          if(reclamos[j].fecha == reclamos[i].fecha){
+            c++;
+          }
         }
-      }
-      if(c == 0){
-        %>
-        <option><%= reclamos[i].fecha %></option>
-    <% }}
-    %>
-  </select>
-  <input type="submit" name="envio" value="Buscar Reclamo">
-</form>
+        if(c == 0){
+          %>
+          <option><%= reclamos[i].fecha %></option>
+      <% }}
+      %>
+    </select>
+    <input class="button_1" type="submit" name="envio" value="Buscar Reclamo">
+  </form>
+</div>

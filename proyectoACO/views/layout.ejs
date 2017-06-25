@@ -7,16 +7,22 @@
 </head>
 <body>
   <header>
-    <h1>Registro de Reclamos</h1>
+    <div class="container">
+      <div id="branding">
+        <h1 class="highlight">Registro de Reclamos</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="../registroReclamo">Registrar Reclamo</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <nav class="main" id="n1" role="navigation">
-    <span><a href="/">Inicio</a></span>
-    <span><a href="../registroReclamo">Registrar Reclamo</a></span>
-  </nav>
-  <section class="main" id="s1">
+  <section id="showcase">
     <%- body %>
   </section>
-  <footer class="main" id="f1">
-    <a href="">Contactenos</a>
+  <footer>
+    <a href="#">Contactenos</a>
   </footer>
 </body>
