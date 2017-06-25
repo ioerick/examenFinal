@@ -1,17 +1,20 @@
 <h3>Bienvenido a  <%= title %></h3>
-<table border="1">
-   <tr>
-       <td>id</td>
-       <td>Tipo Reclamo</td>
-       <td>Observacion</td>
-       <td>Fecha</td>
-    </tr> 
-<% var i; for(i=0; i< reclamos.length; i++) { %>
-   <tr>
-       <td><%= i %></td>
-       <td><%= reclamos[i].tipoReclamo %></td>
-       <td><%= reclamos[i].observacion %></td>
-       <td><%= reclamos[i].fecha %></td>
-    </tr>   
-<% } %>
-</table>
+<form action="buscaReclamo" method="post">
+  <select name="fechaFiltro" id="fechaFiltro">
+    <option>elige una fecha</option>
+    <%
+    for(var i=0; i< reclamos.length; i++) {
+      var c = 0;
+      for(var j=0; j< i; j++){
+        if(reclamos[j].fecha == reclamos[i].fecha){
+          c++;
+        }
+      }
+      if(c == 0){
+        %>
+        <option><%= reclamos[i].fecha %></option>
+    <% }}
+    %>
+  </select>
+  <input type="submit" name="envio" value="Buscar Reclamo">
+</form>

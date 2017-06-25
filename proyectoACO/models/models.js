@@ -11,7 +11,7 @@ var sequelize= new Sequelize (null, null, null, {dialect:"sqlite", storage: "rec
 var reclamo =sequelize.import (path.join(__dirname,'reclamoModel'));
 exports.reclamo =reclamo; //se exporta la definicion
 
-//sequelize.sync() crea e inicializa la tabla. 
+//sequelize.sync() crea e inicializa la tabla.
 sequelize.sync().success (function(){
 	//success ejecuta un manager una vez creada la tabla
    reclamo.count().success(function(count){
@@ -20,10 +20,10 @@ sequelize.sync().success (function(){
    	  	reclamo.create({
    	  		tipoReclamo: "Odeco",
 			   observacion: "Mal Servicio",
-			         fecha: "29/11/2016"
+			         fecha: "2016-6-11"
 				}).success(function(){
    	  			console.log("Reclamos inicializado")
    	  		})
    	  }
    })
-}) 
+})
