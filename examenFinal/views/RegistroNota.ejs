@@ -1,17 +1,7 @@
-<center>
-<form action="guardarNota" method="post">
-  <label for="nombre">nombre</label>
-  <select name="nombre" id="nombre">
-    <option>Eric coila</option>
-    <option>Laura Ochoa</option>
-    <option>Rafael Argandoña</option>
-  </select>
-  <div>
-    <label for="notaFinal">notaFinal</label>
-    <input type="text" id="notaFinal" name="notas[notaFinal]" value="<%= notas.notaFinal %>">
-  </div>
-  <div>
-    <input type="submit" name="envio" value="Registra Reclamo">
-  </div>
+<form method="post" action="guardarNota" >
+	<label for="nombre">nombre:</label>
+	<input type="text" id="nombre" name="nota[nombre]" value="<%= nota.nombre %>">
+	<label for="notaFinal">notaFinal:</label>
+	<input type="text" id="notaFinal" name="nota[notaFinal]" value="<%= nota.notaFinal %>">
+	<input type="submit" name="envio" value="Registrar Nota">
 </form>
-</center>

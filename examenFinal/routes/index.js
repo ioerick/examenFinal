@@ -1,12 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var notasController = require('../controllers/notasController')
-
-
+var notaController = require('../controllers/notaController');
 
 /* GET home page. */
-router.get('/', notasController.principal);
-router.get('/registroNota', notasController.registroNota);
-router.post('/guardarNota', notasController.guardarNota);
-
+router.get('/', notaController.principal);
+router.get('/registroNota', notaController.registroNota);
+router.post('/guardarNota', notaController.guardarNota);
 module.exports = router;
