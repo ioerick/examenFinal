@@ -4,7 +4,7 @@ var hoy = new Date();
 var dd = hoy.getDate();
 var mm = hoy.getMonth()+1;
 var yyyy = hoy.getFullYear();
-hoy = yyyy+'-'+mm+'-'+dd;
+hoy = dd+'-'+mm+'-'+yyyy;
 
 exports.principal = function(req, res, next) {
                  models.reclamo.findAll().then( function(reclamos){

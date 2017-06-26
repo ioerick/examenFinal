@@ -20,7 +20,7 @@ sequelize.sync().success (function(){
    	  	reclamo.create({
    	  		tipoReclamo: "Odeco",
 			   observacion: "Mal Servicio",
-			         fecha: "2016-6-11"
+			         fecha: "11-06-2016"
 				}).success(function(){
    	  			console.log("Reclamos inicializado")
    	  		})
