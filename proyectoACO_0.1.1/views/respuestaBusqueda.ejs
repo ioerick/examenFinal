@@ -1,0 +1,20 @@
+<div class="container">
+
+  <table>
+    <tr>
+      <td colspan="2"><p><%= fechaFiltro %></p></td>
+    </tr>
+   <tr>
+       <td>Tipo Reclamo</td>
+       <td>Observacion</td>
+    </tr>
+  <%
+  for(var i=0; i< reclamos.length; i++) {
+    if(reclamos[i].fecha == fechaFiltro){ %>
+       <tr>
+           <td><%= reclamos[i].tipoReclamo %></td>
+           <td><%= reclamos[i].observacion %></td>
+        </tr>
+  <% }}%>
+  </table>
+</div>

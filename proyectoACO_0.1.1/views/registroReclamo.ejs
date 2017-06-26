@@ -1,0 +1,13 @@
+<div class="container">
+	<form method="post" action="guardarReclamo" >
+		<label>Tipo de Reclamo<span class="required"></span></label>
+		<select name="reclamo[tipoReclamo]" id="tipoReclamo" value="<%= reclamo.tipoReclamo %>" class="field-select">
+			<option>ODECO</option>
+			<option>ODECO2</option>
+			<option>ODECO3</option>
+		</select>
+		<input type="text" id="observacion" name="reclamo[observacion]" value="<%= reclamo.observacion %>" placeholder="observacion">
+		<input type="text" id="fecha" name="reclamo[fecha]" value="<%= reclamo.fecha %>" placeholder="fecha">
+		<input class="button_1" type="submit" name="envio" value="Registrar Reclamo">
+	</form>
+</div>

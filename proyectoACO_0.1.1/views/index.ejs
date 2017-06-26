@@ -1,0 +1,19 @@
+<div class="container">
+  <table>
+   <tr>
+       <td>id</td>
+       <td>Tipo Reclamo</td>
+       <td>Observacion</td>
+       <td>Fecha</td>
+    </tr>
+  <%
+  for(var i=0; i< reclamos.length; i++) {%>
+       <tr>
+           <td><%= i %></td>
+           <td><%= reclamos[i].tipoReclamo %></td>
+           <td><%= reclamos[i].observacion %></td>
+           <td><a href="../buscaReclamo/<%= reclamos[i].fecha %>"><%= reclamos[i].fecha %></a></td>
+        </tr>
+  <% }%>
+  </table>
+</div>
